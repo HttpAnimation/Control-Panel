@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+</head>
+<body>
+    <h1>Control Panel</h1>
+    <form method="post" action="{{ url_for('execute_command') }}">
+        <label for="command">Enter Command:</label>
+        <input type="text" id="command" name="command" required>
+        <button type="submit">Execute</button>
+    </form>
+
+    {% if result %}
+        <h2>Command Result:</h2>
+        <pre>{{ result }}</pre>
+    {% endif %}
+</body>
+</html>

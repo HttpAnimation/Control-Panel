@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  control-panel-python:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    ports:
+      - "9096:80"
+
+  control-panel-php:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    ports:
+      - "9097:80"
